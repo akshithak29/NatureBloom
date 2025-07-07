@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureBloom Organics - Thank You!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfaf6; /* Light cream background */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a7d9b7; /* Greenish scrollbar */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8ecf9f;
+        }
+    </style>
+</head>
+<body class="text-gray-800 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-emerald-700">NatureBloom Organics</a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-lg font-medium text-gray-700 hover:text-emerald-600 transition duration-300">Home</a></li>
+                <li><a href="products.html" class="text-lg font-medium text-gray-700 hover:text-emerald-600 transition duration-300">Products</a></li>
+                <li><a href="contact.html" class="text-lg font-medium text-gray-700 hover:text-emerald-600 transition duration-300">Contact Us</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="index.html" class="text-3xl font-bold text-emerald-700 hover:text-emerald-600 transition duration-300">Home</a>
+            <a href="products.html" class="text-3xl font-bold text-emerald-700 hover:text-emerald-600 transition duration-300">Products</a>
+            <a href="contact.html" class="text-3xl font-bold text-emerald-700 hover:text-emerald-600 transition duration-300">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center py-16 md:py-24">
+        <section class="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-2xl mx-auto text-center border border-emerald-100">
+            <div class="text-emerald-600 mb-6">
+                <svg class="w-24 h-24 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-emerald-800 mb-4">
+                Thank You!
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-8">
+                Your message has been successfully sent. We appreciate you reaching out to NatureBloom Organics.
+                We will get back to you as soon as possible.
+            </p>
+            <a href="index.html" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Return to Homepage
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-900 text-white py-8 px-6 md:px-12 mt-auto rounded-t-lg">
+        <div class="container mx-auto text-center md:flex md:justify-between md:items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025 NatureBloom Organics. All rights reserved.</p>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
