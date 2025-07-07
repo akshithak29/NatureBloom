@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureBloom Organics - Our Products</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfaf6; /* Light cream background */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a7d9b7; /* Greenish scrollbar */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8ecf9f;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-emerald-700">NatureBloom Organics</a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-lg font-medium text-gray-700 hover:text-emerald-600 transition duration-300">Home</a></li>
+                <li><a href="products.html" class="text-lg font-medium text-emerald-600 hover:text-emerald-600 transition duration-300">Products</a></li>
+                <li><a href="contact.html" class="text-lg font-medium text-gray-700 hover:text-emerald-600 transition duration-300">Contact Us</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="index.html" class="text-3xl font-bold text-emerald-700 hover:text-emerald-600 transition duration-300">Home</a>
+            <a href="products.html" class="text-3xl font-bold text-emerald-700 hover:text-emerald-600 transition duration-300">Products</a>
+            <a href="contact.html" class="text-3xl font-bold text-emerald-700 hover:text-emerald-600 transition duration-300">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Products Hero Section -->
+        <section class="relative bg-gradient-to-r from-emerald-100 to-green-100 py-16 md:py-24 text-center overflow-hidden rounded-b-xl shadow-inner">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://media.istockphoto.com/id/467069070/photo/green-nature-background.jpg?s=612x612&w=0&k=20&c=vNWr8wP4yqQbvVGXnMqKAnYe5qo_FvBBWcqYDyoYdf8=');"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-emerald-900 leading-tight mb-4 animate-fade-in-down">
+                    Our Pure & Potent Collection
+                </h1>
+                <br>
+                <br>
+                <br>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto animate-fade-in-up">
+                    Explore our full range of organic skincare products, crafted with care for every skin type.
+                </p>
+            </div>
+        </section>
+
+        <!-- Product Categories/Grid -->
+        <section class="py-16 md:py-24 bg-white rounded-xl shadow-lg mx-auto my-12 max-w-6xl px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-800 mb-12">Discover Your Perfect Skincare</h2>
+
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Item 1: Cleanser -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100">
+                        <img src="https://thumbs.dreamstime.com/b/cosmetics-mock-up-template-bottle-washing-foam-blank-label-branch-white-background-face-skin-care-cleanser-flatlay-246003907.jpg" alt="Gentle Cleansing Balm" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-emerald-700 mb-2">Gentle Cleansing Balm</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Melt away impurities with this nourishing balm, leaving skin soft and hydrated.
+                        </p>
+                        <span class="text-lg font-bold text-emerald-800">$28.00</span>
+                        <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 rounded-lg transition-colors duration-300">Add to Cart</button>
+                    </div>
+
+                    <!-- Product Item 2: Toner -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100">
+                        <img src="https://www.shutterstock.com/image-photo/natural-organic-cosmetic-product-green-260nw-2470276829.jpg" alt="Balancing Rose Toner" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-emerald-700 mb-2">Balancing Rose Toner</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Refresh and balance your skin's pH with our soothing organic rosewater toner.
+                        </p>
+                        <span class="text-lg font-bold text-emerald-800">$22.00</span>
+                        <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 rounded-lg transition-colors duration-300">Add to Cart</button>
+                    </div>
+
+                    <!-- Product Item 3: Serum -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100">
+                        <img src="https://www.shutterstock.com/image-photo/empty-label-transparent-serum-bottle-600nw-2482017305.jpg" alt="Vitamin C Serum" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-emerald-700 mb-2">Brightening Vitamin C Serum</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Boost radiance and even skin tone with this powerful, natural Vitamin C serum.
+                        </p>
+                        <span class="text-lg font-bold text-emerald-800">$45.00</span>
+                        <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 rounded-lg transition-colors duration-300">Add to Cart</button>
+                    </div>
+
+                    <!-- Product Item 4: Moisturizer -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100">
+                        <img src="https://m.media-amazon.com/images/I/617m5OVJkaL._SL1500_.jpg" alt="Daily Hydrating Cream" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-emerald-700 mb-2">Daily Hydrating Cream</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Lightweight yet deeply moisturizing, perfect for everyday use.
+                        </p>
+                        <span class="text-lg font-bold text-emerald-800">$35.00</span>
+                        <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 rounded-lg transition-colors duration-300">Add to Cart</button>
+                    </div>
+
+                    <!-- Product Item 5: Eye Cream -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100">
+                        <img src="https://www.shutterstock.com/image-photo/cosmetics-skincare-jars-dose-antiaging-260nw-1052587508.jpg" alt="Anti-Aging Eye Cream" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-emerald-700 mb-2">Revitalizing Eye Cream</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Target fine lines and dark circles with this delicate, potent eye cream.
+                        </p>
+                        <span class="text-lg font-bold text-emerald-800">$49.00</span>
+                        <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 rounded-lg transition-colors duration-300">Add to Cart</button>
+                    </div>
+
+                    <!-- Product Item 6: Mask -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100">
+                        <img src="https://www.shutterstock.com/image-photo/serum-oil-fabric-cosmetic-face-260nw-1798089460.jpg" alt="Detox Clay Mask" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-emerald-700 mb-2">Purifying Clay Mask</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Deep cleanse and detoxify with our mineral-rich clay mask for clear, smooth skin.
+                        </p>
+                        <span class="text-lg font-bold text-emerald-800">$32.00</span>
+                        <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 rounded-lg transition-colors duration-300">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-900 text-white py-8 px-6 md:px-12 mt-12 rounded-t-lg">
+        <div class="container mx-auto text-center md:flex md:justify-between md:items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025 NatureBloom Organics. All rights reserved.</p>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
